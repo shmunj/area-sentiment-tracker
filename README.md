@@ -8,4 +8,4 @@ Simple web interface informs you of the mood of the area and design (background 
 
 It also shows you a line chart with sentiments of individual tweets.
 
-Check it out [HERE](https://cryptic-reaches-32945.herokuapp.com/)
+Check it out [HERE](https://cryptic-reaches-32945.herokuapp.com/) (Refresh to see the mood change.)
