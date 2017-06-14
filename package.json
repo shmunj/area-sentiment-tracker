@@ -1,0 +1,22 @@
+{
+  "name": "area-sentiment-tracker",
+  "version": "1.0.0",
+  "description": "Track overall mood of chosen geographical area by calculating average sentiment of tweets coming from that area.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "twitter",
+    "sentiment analysis"
+  ],
+  "author": "Shmunj",
+  "license": "GPL2",
+  "dependencies": {
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2",
+    "sentiment": "^4.0.0",
+    "twitter": "^1.7.1"
+  }
+}

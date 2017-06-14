@@ -1,0 +1,42 @@
+doctype
+html(lang="en")
+
+    head
+        meta(charset="UTF-8")
+        meta(description="Check area sentiment based on tweets.")
+        title Area Sentiment
+
+        script(src="https://code.jquery.com/jquery-3.2.1.slim.js"
+            integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
+            crossorigin="anonymous")
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js")
+        
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+            crossorigin="anonymous")
+
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous")
+
+        link(rel="stylesheet" href="/css/style.css")
+
+        script= "var sentimentData = " + data + "; var sentimentTextColor = " + sentimentTextColor + "; var maxTick = " + maxTick + ";"
+        
+        script(src="js/chartdata.js")
+        
+        style= ".sentimentColor { background-color: rgb(" + sentimentColor + "," + sentimentColor + "," + sentimentColor + ")}" + ".sentimentTextColor { color: rgb(" + sentimentTextColor + "," + sentimentTextColor + "," + sentimentTextColor + ")}"
+
+    body(class="sentimentColor")
+        
+        h1(class="row centered sentimentTextColor")= "Location: " + geoName
+        
+        h2(class="row centered sentimentTextColor")= "Average sentiment: " + stats.avgSentiment
+        
+        h3(class="row centered sentimentTextColor")= "Tracking tweets: " + stats.totalTweets
+        
+        h3(class="row centered sentimentTextColor")= "Total sentiment: " + stats.totalSentiment
+
+        div(class="row centered")
+            canvas(id="chartcanvas")
